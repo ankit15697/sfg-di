@@ -1,6 +1,7 @@
 package com.ankit.sfgdi;
 
 import com.ankit.sfgdi.controllers.ConstructorInjectedController;
+import com.ankit.sfgdi.controllers.I18NController;
 import com.ankit.sfgdi.controllers.PropertyInjectedController;
 import com.ankit.sfgdi.controllers.SetterBasedController;
 import org.springframework.boot.SpringApplication;
@@ -30,6 +31,10 @@ public class SfgDiApplication {
 		ConstructorInjectedController constructorInjectedController = ctx.getBean(ConstructorInjectedController.class);
 		System.out.println(constructorInjectedController);
 		System.out.println(constructorInjectedController.getGreeting());
+
+		I18NController i18NController = ctx.getBean(I18NController.class);
+		System.out.println(i18NController);
+		System.out.println(i18NController.getGreeting());
 	}
 
 }
